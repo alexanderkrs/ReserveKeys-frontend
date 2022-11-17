@@ -1,0 +1,33 @@
+<p>Listagem de Chaves</p>
+
+<!--<section>-->
+<!--  <ul class="list-group">-->
+<!--    <li class="list-group-item task-item" *ngFor="let chave of chaves">-->
+<!--      <div>{{ chave.id }} - {{ chave.description }}</div>-->
+<!--    </li>-->
+<!--  </ul>-->
+<!--</section>-->
+<section>
+  <ul class="list-group">
+    <li class="list-group-item task-item" *ngFor="let chave of chaves">
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input"/>
+      </div>
+      <div [innerHTML]="chave.description" class="chave-item-description" [ngClass]="chave.completed ? 'chave-completed': ''">
+      </div>
+      <div>
+        <button type="button" [routerLink]="['/edit', chave.id]" class="btn btn-primary mr-1">
+          Alterar
+        </button>
+      </div>
+      <button type="button" class="btn btn-danger">
+        Excluir
+      </button>
+    </li>
+  </ul>
+</section>
+
+
+<button type="button" class="btn btn-primary mb-2" [routerLink]="['/cadastrar']">
+  Criar
+</button>

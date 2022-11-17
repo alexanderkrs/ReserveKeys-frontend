@@ -1,7 +1,7 @@
-import { Task } from './task';
+import { Chave } from './chave';
 
 describe('Task', () => {
   it('should create an instance', () => {
-    expect(new Task()).toBeTruthy();
+    expect(new Chave()).toBeTruthy();
   });
 });

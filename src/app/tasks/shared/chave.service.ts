@@ -1,19 +1,19 @@
 import { Injectable } from '@angular/core';
-import {Task} from "./task";
+import {Chave} from "./chave";
 
 @Injectable({
   providedIn: 'root'
 })
-export class TaskService {
+export class ChaveService {
 
-  tasks: Task[] = [
+  tasks: Chave[] = [
     {id: 1, description: 'Laboratorio', completed: false},
     {id: 2, description: 'Sala', completed: true},
   ]
 
   constructor() { }
 
-  getAll(): Task[] {
+  getAll(): Chave[] {
     return this.tasks;
   }
 }
