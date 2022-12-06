@@ -1,5 +1,6 @@
 export class Chave {
   id!: number;
-  description!: string;
-  completed!: boolean;
+  num!: number;
+  local!: string;
+  desc!: string;
 }
